@@ -1,0 +1,2 @@
+export const ADD_PROJECT = 'ADD_PROJECT'
+export const CURRENT_MODAL = 'CURRENT_MODAL'
