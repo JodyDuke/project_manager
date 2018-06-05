@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import NewProject from '../modals/new_project';
+import React from 'react';
 
 const NewProject = () => {
     return (
