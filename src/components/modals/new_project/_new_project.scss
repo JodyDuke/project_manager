@@ -1,0 +1,17 @@
+.new-project-modal {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    .new-project-modal-input {
+        width: 80%;
+        height: 80%;
+        background-color: white;
+        border-radius: 10px;
+    }
+}
+
