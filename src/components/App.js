@@ -1,7 +1,7 @@
 import React from 'react';
 import Menu from './nav-menu/menu'
 import Sidebar from './sidebar/sidebar'
-import ModalDisplay from './modals/modal'
+import ModalDisplay from './modals/modal_switch'
 
 
 const App = () => {

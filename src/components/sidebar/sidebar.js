@@ -29,6 +29,7 @@ class ConnectedSidebar extends Component {
         this.toggleCollapse = this.toggleCollapse.bind(this)
     }
 
+    //shoots off an action to the store using connect to update modal state
     changeModal(e) {
         e.preventDefault()
         this.props.currentModal('NEW_PROJECT')
