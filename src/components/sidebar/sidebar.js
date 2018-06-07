@@ -12,7 +12,7 @@ const SidebarBody = (props) => {
         return (
             <div className="sidebar-body">
                 <h2 className="heading">Projects</h2>
-                <button onClick={props.addProject}>add project</button>
+                <button className="button" onClick={props.addProject}>add project</button>
             </div>
         )
 }
