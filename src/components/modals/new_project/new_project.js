@@ -22,9 +22,7 @@ class ConnectedNewProject extends Component {
     }
 
     handleBackgroundClose(e) {
-        console.log(e.target.className)
         e.preventDefault()
-        e.stopPropagation()
         if (e.target.className === 'new-project-modal') {
             this.props.currentModal(null)
         }
@@ -35,7 +33,14 @@ class ConnectedNewProject extends Component {
             <div onClick={this.handleBackgroundClose} className="new-project-modal">
                 <div className="new-project-modal-input">
                     <h3>New project</h3>
-                    <button onClick={this.handleClose}>close</button>
+                    <div className="new-project-form">
+                        form...
+                    </div>
+
+                    <div className="buttons">
+                        <button className="button close" onClick={this.handleClose}>Cancel</button>
+                        <button className="button submit" onClick={this.handleSubmit}>Create</button>
+                    </div>
                 </div>
             </div>
         )
