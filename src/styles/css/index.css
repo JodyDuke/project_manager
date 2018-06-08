@@ -126,7 +126,9 @@ button {
     background-color: white;
     border-radius: 10px; }
     .new-project-modal .new-project-modal-input .new-project-form {
-      flex-grow: 1; }
+      flex-grow: 1;
+      margin: 1em 0em;
+      overflow: scroll; }
     .new-project-modal .new-project-modal-input .buttons {
       margin-bottom: auto;
       border-radius: 10px;
