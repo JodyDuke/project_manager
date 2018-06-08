@@ -33,7 +33,9 @@ class ConnectedNewProject extends Component {
     }
 
     handleSubmit(e) {
+        e.preventDefault()
         this.props.addProject(this.state)
+        this.props.currentModal(null)
     }
 
     handleClose(e) {
@@ -55,7 +57,7 @@ class ConnectedNewProject extends Component {
                 <div className="new-project-modal-input">
                     <h3>New project</h3>
                     <div className="new-project-form">
-                        <form>
+                        <form onSubmit={this.handleSubmit}>
                             Project name:<br />
                             <input type="text" id="projectName" value={projectName} onChange={this.handleInputChange}></input>
                         </form>
