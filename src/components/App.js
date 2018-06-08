@@ -1,4 +1,5 @@
 import React from 'react';
+import Main from './main/main'
 import Menu from './nav-menu/menu'
 import Sidebar from './sidebar/sidebar'
 import ModalDisplay from './modals/modal_switch'
@@ -9,7 +10,7 @@ const App = () => {
         <div className="app">
             <ModalDisplay />
             <Menu />
-            <Sidebar />
+            <Main />
         </div>
     )
 }
