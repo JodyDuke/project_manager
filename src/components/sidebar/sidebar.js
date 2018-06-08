@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { currentModal } from '../../redux/actions';
+import Button from '../buttons'
 
 const mapDispatchToProps = dispatch => {
     return {
@@ -12,7 +13,7 @@ const SidebarBody = (props) => {
         return (
             <div className="sidebar-body">
                 <h2 className="heading">Projects</h2>
-                <button className="button" onClick={props.addProject}>add project</button>
+                <Button text="Add Project" onClick={props.addProject}/>
             </div>
         )
 }
