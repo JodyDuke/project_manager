@@ -1,10 +1,18 @@
-import { ADD_PROJECT } from '../constants/action-types';
-import { CURRENT_MODAL } from '../constants/action-types';
+import { ADD_PROJECT,
+        CURRENT_PROJECT,
+        CURRENT_MODAL } from '../constants/action-types';
 
 export const addProject = newProject => {
     return {
         type: ADD_PROJECT,
         payload: newProject
+    }
+}
+
+export const currentProject = projectId => {
+    return {
+        type: CURRENT_PROJECT,
+        payload: projectId
     }
 }
 
