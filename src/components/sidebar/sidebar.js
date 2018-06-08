@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { currentModal } from '../../redux/actions';
 import Button from '../buttons'
+import ProjectList from './projectList'
 
 const mapDispatchToProps = dispatch => {
     return {
@@ -13,6 +14,7 @@ const SidebarBody = (props) => {
         return (
             <div className="sidebar-body">
                 <h2 className="heading">Projects</h2>
+                <ProjectList />
                 <Button text="Add Project" onClick={props.addProject}/>
             </div>
         )
