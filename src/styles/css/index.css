@@ -103,11 +103,25 @@ button {
 
 .sidebar-body {
   display: inline-block;
-  width: 250px;
+  width: 350px;
   background-color: pink;
+  overflow: scroll;
   text-align: center; }
   .sidebar-body .heading {
     margin: 0.5em; }
+
+.project-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column; }
+  .project-list .project-list-node {
+    cursor: pointer;
+    text-align: left;
+    margin: 10px auto 5px auto;
+    padding: 10px;
+    width: 80%;
+    min-height: 100px;
+    background-color: lightyellow; }
 
 .new-project-modal {
   position: absolute;
