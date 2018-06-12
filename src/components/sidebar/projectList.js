@@ -3,18 +3,14 @@ import { connect } from 'react-redux';
 import { currentProject, deleteProject } from '../../redux/actions'
 
 
-const mapStateToProps = state => {
-    return {
+const mapStateToProps = state => ({
         projects: state.projects
-    }
-}
+})
 
-const mapDispatchToProps = dispatch => {
-    return {
+const mapDispatchToProps = dispatch => ({
         currentProject: input => dispatch(currentProject(input)),
         deleteProject: int => dispatch(deleteProject(int))
-    }
-}
+})
 
 class ConnectedProjectList extends Component {
     constructor(props) {
@@ -24,12 +20,10 @@ class ConnectedProjectList extends Component {
     }
 
     handleClick(e) {
-        e.preventDefault()
         this.props.currentProject(parseInt(e.target.id, 10))
     }
 
     close(e) {
-        e.preventDefault()
         e.stopPropagation()
         this.props.deleteProject(parseInt(e.target.parentNode.id, 10))
     }
