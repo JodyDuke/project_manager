@@ -38,7 +38,7 @@ class ConnectedProjectList extends Component {
             <div className="project-list">
                 {this.props.projects.map((e, k) => {
                     return (
-                        <div key={k} id={k} className="project-list-node">
+                        <div onClick={this.handleClick} key={k} id={k} className="project-list-node">
                             <button onClick={this.close}>X</button>
                             <h3>{e.projectName}</h3>
                         </div>
