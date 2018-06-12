@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { currentModal, addProject } from '../../../redux/actions';
 import Button from '../../buttons'
+import { randomPastel } from '../../../utils/pastel_color'
 
 
 const mapDispatchToProps = (dispatch) => {
@@ -34,8 +35,14 @@ class ConnectedNewProject extends Component {
 
     handleSubmit(e) {
         e.preventDefault()
-        this.props.addProject(this.state)
-        this.props.currentModal(null)
+        this.setState({
+            projectDetails: {
+                color: randomPastel()
+            }
+        }, () => {
+            this.props.addProject(this.state)
+            this.props.currentModal(null)
+        })
     }
 
     handleClose(e) {
