@@ -25,12 +25,13 @@ class ConnectedProjectList extends Component {
 
     handleClick(e) {
         e.preventDefault()
-        this.props.currentProject(e.target.id)
+        this.props.currentProject(parseInt(e.target.id, 10))
     }
 
     close(e) {
         e.preventDefault()
-        this.props.deleteProject(e.target.parentNode.id)
+        e.stopPropagation()
+        this.props.deleteProject(parseInt(e.target.parentNode.id, 10))
     }
 
     render() {
@@ -39,7 +40,7 @@ class ConnectedProjectList extends Component {
                 {this.props.projects.map((e, k) => {
                     return (
                         <div onClick={this.handleClick} key={k} id={k} style={{backgroundColor: e.projectDetails.color}} className="project-list-node">
-                            <button onClick={this.close}>X</button>
+                            <button onClick={this.close}>Delete</button>
                             <h3>{e.projectName}</h3>
                         </div>
                     )
