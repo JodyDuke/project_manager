@@ -123,7 +123,8 @@ button {
     min-height: 100px; }
     .project-list .project-list-node button {
       cursor: pointer;
-      float: right; }
+      float: right;
+      margin: 0px 3px; }
 
 .new-project-modal {
   position: absolute;
