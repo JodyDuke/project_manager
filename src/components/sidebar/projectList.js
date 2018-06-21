@@ -15,8 +15,8 @@ const mapDispatchToProps = dispatch => ({
 const Confirm = (props) => {
     return (
         <div id={props.id} className="confirm-delete">
-            <button onClick={props.cancel}>Cancel</button>
-            <button onClick={props.del}>Confirm delete</button>
+            <button className="submit" onClick={props.cancel}>Cancel</button>
+            <button className="close" onClick={props.del}>Confirm delete</button>
         </div>
     )
 }
