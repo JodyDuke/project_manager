@@ -9,10 +9,6 @@ const mapStateToProps = state => {
 }
 
 class ConnectedMain extends Component {
-    constructor(props){
-        super(props)
-    }
-
     render() {
         const { project } = this.props
         
